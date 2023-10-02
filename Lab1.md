@@ -1,4 +1,4 @@
-In this post, I will be discussing some basic filesystem commands. 
+In this report/post, I will be discussing some basic filesystem commands. 
 Specifically: cd, ls, and cat
 
 1. What happens when you use these commands with no arguments?
