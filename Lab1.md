@@ -1,3 +1,5 @@
+## Lab 1 Report
+
 In this report/post, I will be discussing some basic filesystem commands. 
 Specifically: cd, ls, and cat
 
