@@ -6,7 +6,11 @@ Specifically: cd, ls, and cat
 **1. What happens when you use these commands with no arguments?**
 
    a. Using cd without arguments resets the directory to the home directory.
-   This is the conventional behavior for most terminals, but somtimes if there is no home directory, cd without arguments will do nothing. It is not an error. 
+   This is the conventional behavior for most terminals, but somtimes if there is no home directory, cd without arguments will do nothing. 
+
+
+   ![image](https://github.com/willyum00/cse15l-lab-reports/assets/81535097/e7b4e475-0840-41d3-b494-08281a0d9e19)
+
 
    b. Using ls without arguments prints a list of every file in your current directory. This is the conventional and expected behavior for ls without arguments, and it makes it easy to navigate through the paths. 
    
@@ -15,6 +19,7 @@ Specifically: cd, ls, and cat
    c. Using cat without arguments does nothing, as cat is used to print the contents of a file in text form. If you use no input for the cat command, it will read data from the standard input (the waiting terminal) and send it to the standard output. 
 ![image](https://github.com/willyum00/cse15l-lab-reports/assets/81535097/4396f58d-1d4b-44f2-8f1f-bb198347cb77)
 In order to exit, you have to manually terminate using ctrl + C.
+This behavior is not an error, it is normal and expected behavior. 
 
 
 **2. What happens when you use these commands with a path to a directory as an argument?**
@@ -31,17 +36,17 @@ In order to exit, you have to manually terminate using ctrl + C.
 
    ![image](https://github.com/willyum00/cse15l-lab-reports/assets/81535097/7cfd3dc1-c499-4338-bcb8-57a36ea4fdfb)
 
-   c. Using cat with a directory will display an error message. This is because cat needs to be given a path to a file, not a directory. 
+   c. Using cat with a directory will display an error message. This is because cat needs to be given a path to a file, not a path to a directory. 
 
    ![image](https://github.com/willyum00/cse15l-lab-reports/assets/81535097/5cd9a51e-06d5-4f54-9b49-ae6783eca544)
 
 **3. What happens when you use these commands with a path to a file as an argument? 
 
-   a. Using cd with a path will throw a "not a directory" error. This is because cd can only take a directory (or nothing) as an argument. 
+   a. Using cd with a path to a file will throw a "not a directory" error. This is because cd can only take a directory (or nothing) as an argument. 
 
    ![image](https://github.com/willyum00/cse15l-lab-reports/assets/81535097/75c32eb6-d24c-45db-a445-0cf41dfe018e)
 
-   b. Using ls with a path to a file will simply return the argument back to you. This is the conventional behavior because ls is used to list the contents in a directory, and files are not directories. 
+   b. Using ls with a path to a file will simply return the argument back to you. This is the conventional behavior, not an error. ls is used to list the contents in a directory, and files are not directories. 
 
    ![image](https://github.com/willyum00/cse15l-lab-reports/assets/81535097/346b16d6-385e-449e-bf23-472fc0b9bed0)
 
