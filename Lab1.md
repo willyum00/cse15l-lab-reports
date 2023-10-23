@@ -40,7 +40,7 @@ This behavior is not an error, it is normal and expected behavior.
 
    ![image](https://github.com/willyum00/cse15l-lab-reports/assets/81535097/5cd9a51e-06d5-4f54-9b49-ae6783eca544)
 
-**3. What happens when you use these commands with a path to a file as an argument? 
+**3. What happens when you use these commands with a path to a file as an argument?**
 
    a. Using cd with a path to a file will throw a "not a directory" error. This is because cd can only take a directory (or nothing) as an argument. 
 
