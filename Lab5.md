@@ -9,7 +9,7 @@ This is the file "pre-fix":
 
 ![image](https://github.com/willyum00/cse15l-lab-reports/assets/81535097/7f73446c-95b6-437e-a605-afc38c79af76)
 
-I have underlined the bugs in the code caus
+I have underlined the bugs in the code causing the symptoms.
 
 __student:__  I need help with finding the bugs in my ListExamples.java file. Here is a screenshot of the failed test: 
 
