@@ -11,11 +11,13 @@ This is the file "pre-fix":
 
 I have underlined the bugs in the code causing the symptoms.
 
+### (Post) Subject: Help with bugs in ListExamples.java
+
 __student:__  I need help with finding the bugs in my ListExamples.java file. Here is a screenshot of the failed test: 
 
 ![image](https://github.com/willyum00/cse15l-lab-reports/assets/81535097/f3e5e0ee-db2a-429d-b586-ade9841ec4dc)
 
-Test 1 tells me exactly which line is causing the error, so something written at that line is directly causing the error. Test 2 doesn't tell me which line is causing the error, which suggests that the code is running but the error is being caused by incorrect behavior. If I had to guess, the merge test is failing because of something wrong within the while loop? 
+Test 1 tells me exactly which line is causing the error, so something written at that line is directly causing the error. Test 2 doesn't tell me which line is causing the error, which suggests that the code is running but the error is being caused by incorrect behavior. If I had to guess, the merge test is failing because of something wrong within the first while loop? 
 
 __TA:__ That's a good idea. Read the failure message for test1, and follow the line number it gives to find the error there. Do you notice any instructions to change anything there? Your idea for why test2 is failing is also good, it is probably a behavioral bug rather than a functional bug. Notice how the test2 error message says it expected [a] but got [c], which could suggest that the list was unintentionally reversed. Try to see if you can find where the ordering of the items in list is determined. 
 
