@@ -3,13 +3,14 @@
 ## Part 1 - Debugging Scenario
 
 ### A conversation between a student and a TA. 
-### Code is from Lab7's ListExamples.java
+### Code is from Lab7's ListExamples.java. File structure is ~/Lab7/ListExamples.java 
+### To get the code, first run ssh cs15lfa23xx@ieng6.ucsd.edu, then run git clone https://github.com/ucsd-cse15l-s23/lab7. 
 
-This is the file "pre-fix":
+This is the ListExamples.java "pre-fix":
 
 ![image](https://github.com/willyum00/cse15l-lab-reports/assets/81535097/7f73446c-95b6-437e-a605-afc38c79af76)
 
-I have underlined the bugs in the code causing the symptoms.
+I have underlined the bugs in the code causing the symptoms. __The bug I created__ is reversing the direction of the comparison operator at the first underlined portion, and leaving index1 unchanged at the second underlined portion. 
 
 ### (Post) Subject: Help with bugs in ListExamples.java
 
@@ -23,9 +24,13 @@ __TA:__ That's a good idea. Read the failure message for test1, and follow the l
 
 __student:__  Here are the fixes I made. At line 44, there was indeed an instruction to change index1 to index2. For test2, I figured that since test1 fails at line 44, that means the outer while loop is triggered, so the symptom is probably not caused in the outer while loop. The two inner while loops are used to fill the list. Judging from the failure message, the lists have been filled, they are just in the wrong order. Thus, I determined that the bug was likely caused by the line:
 
- if(list1.get(index1).compareTo(list2.get(index2)) > 0) 
+```
+ if(list1.get(index1).compareTo(list2.get(index2)) > 0)
+```
 
-As this seems like the line where the order of the items in the list are determined. I changed the > to a <. I then ran the test again it passed. It seems the reason > was causing a behavioral issue was because list1.get(index1).compareTo(list2.get(index2)) gives a negative number if the string at index1 is lexographically less than the string at index 2 (i.e., a is lexographically less than c) and gives a positive number if the string at index1 is lexographically greater than the string at index 2. If the current direction (>) of the comparison operator were wrong, then it makes sense that this is probably causing the list order reversal. 
+As this seems like the line where the order of the items in the list are determined. I changed the > to a <. I then ran the test again and it passed. 
+
+I think the reason ">" was causing a behavioral issue was because __list1.get(index1).compareTo(list2.get(index2))__ gives a negative number if the string at index1 is lexographically less than the string at index 2 (i.e., a is lexographically less than c) and gives a positive number if the string at index1 is lexographically greater than the string at index 2. If the direction (>) of the comparison operator were wrong, then it makes sense that it's this line that is causing the list order reversal. Changing the direction of the comparison operator and passing the test confirms this idea. 
  
 
 ![image](https://github.com/willyum00/cse15l-lab-reports/assets/81535097/821001c3-4fc9-4c17-ae27-8f3250cabd87)
